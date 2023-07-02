@@ -39,28 +39,27 @@ export default function Catagory() {
                         </div>
                     </div>
                     <div className="flex flex-col">
-                    </div>
-                    {/* SHOULDER BAGS */}
-                    <div className="h-[1500px] w-[800px] overflow-clip rotate-[12deg] -right-10 top-40">
-                        <div className="bg-Vanilla group w-[400px] h-28 ml-32">
-                            <img className="rotate-[-12deg] scale-[1.1] translate-x-40 group-hover:cursor-pointer translate-y-10 group-hover:rotate-[-10deg] group-hover:translate-x-32 duration-150" src="https://drive.google.com/uc?view&id=1koCuYyxQQ-_7nf0rDV9ic6ZnxbZ2dwnQ" alt="" />
-                            <div className="rotate-[-12deg] p-2 group group-hover:cursor-pointer bg-center w-[500px] bg-cover -translate-x-[100px] -translate-y-[800px] bg-no-repeat bg-[url('https://drive.google.com/uc?view&id=18UPqNZ9JkiMqICL-gLW7WcFhbBuSTD5A')]">
-                                <h1 className="font-inter font-medium group-hover:translate-x-1 duration-100 text-center underline decoration-Green underline-offset-1 text-BerkelyBlue text-h3">SHOULDER BAGS</h1>
-                                <p className="font-inter text-p4 text-right group-hover:-translate-x-2 group-hover:-translate-y-1 duration-100 text-BerkelyBlue">SHOP NOW</p>
+                        {/* SHOULDER BAGS */}
+                        <div className="absolute h-[1500px] w-[800px] overflow-clip rotate-[12deg] -right-10 top-40">
+                            <div className="bg-Vanilla group w-[400px] h-28 ml-32">
+                                <img className="rotate-[-12deg] scale-[1.1] translate-x-40 group-hover:cursor-pointer translate-y-10 group-hover:rotate-[-10deg] group-hover:translate-x-32 duration-150" src="https://drive.google.com/uc?view&id=1koCuYyxQQ-_7nf0rDV9ic6ZnxbZ2dwnQ" alt="" />
+                                <div className="rotate-[-12deg] p-2 group group-hover:cursor-pointer bg-center w-[500px] bg-cover -translate-x-[100px] -translate-y-[800px] bg-no-repeat bg-[url('https://drive.google.com/uc?view&id=18UPqNZ9JkiMqICL-gLW7WcFhbBuSTD5A')]">
+                                    <h1 className="font-inter font-medium group-hover:translate-x-1 duration-100 text-center underline decoration-Green underline-offset-1 text-BerkelyBlue text-h3">SHOULDER BAGS</h1>
+                                    <p className="font-inter text-p4 text-right group-hover:-translate-x-2 group-hover:-translate-y-1 duration-100 text-BerkelyBlue">SHOP NOW</p>
+                                </div>
+                            </div>
+                        </div>
+                        {/* ACCESSORIERS */}
+                        <div className="absolute overflow-clip rotate-[26.5deg] h-[750px] w-[500px] pt-52 bottom-40 right-32">
+                            <div className="bg-Green group w-52 h-[450px] ml-auto">
+                                <img className="rotate-[-26.5deg] scale-[1.65] -translate-x-24 -translate-y-10 group-hover:cursor-pointer group-hover:-translate-x-28 duration-150" src="https://drive.google.com/uc?view&id=17RburyJVm6LnWrgbVPmNTp1MAkyJaR3C" alt="" />
+                                <div className="group absolute top-28 -left-3 group-hover:cursor-pointer rotate-[-26.5deg] w-96 p-8 bg-no-repeat bg-contain bg-center bg-[url('https://drive.google.com/uc?view&id=1frRWhNE0OWZcC8roEOZXXNhfv4ohcjo5')] ">
+                                    <h2 className="font-inter text-h3 font-medium text-white underline decoration-UranianBlue duration-150 group-hover:-translate-x-1">ACCESSORIES</h2>
+                                    <p className="font-inter text-p4 text-right group-hover:translate-x-3 group-hover:-translate-y-1 duration-150 uppercase text-white">shop now</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    {/* ACCESSORIERS */}
-                    <div className="absolute overflow-clip rotate-[26.5deg] h-[750px] w-[500px] pt-52 bottom-40 right-32">
-                        <div className="bg-Green group w-52 h-[450px] ml-auto">
-                            <img className="rotate-[-26.5deg] scale-[1.65] -translate-x-24 -translate-y-10 group-hover:cursor-pointer group-hover:-translate-x-28 duration-150" src="https://drive.google.com/uc?view&id=17RburyJVm6LnWrgbVPmNTp1MAkyJaR3C" alt="" />
-                            <div className="group absolute top-28 -left-3 group-hover:cursor-pointer rotate-[-26.5deg] w-96 p-8 bg-no-repeat bg-contain bg-center bg-[url('https://drive.google.com/uc?view&id=1frRWhNE0OWZcC8roEOZXXNhfv4ohcjo5')] ">
-                                <h2 className="font-inter text-h3 font-medium text-white underline decoration-UranianBlue duration-150 group-hover:-translate-x-1">ACCESSORIES</h2>
-                                <p className="font-inter text-p4 text-right group-hover:translate-x-3 group-hover:-translate-y-1 duration-150 uppercase text-white">shop now</p>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
