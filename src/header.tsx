@@ -1,6 +1,16 @@
 import { useState } from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import logo from '@/assets/logo.svg';
+
+// @ts-ignore
+import wallpaper from './assets/wallpaper.jpg?w=500;700;900;1200&format=webp&as=srcset';
+import {
+    src as placeholder,
+    width,
+    height,
+    // @ts-ignore
+} from './assets/wallpaper.jpg?w=300&format=webp&as=metadata';
 
 const navigation = [
     { name: 'LUGGAGE', href: '#' },
@@ -13,7 +23,17 @@ export default function Example() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     return (
-        <div className="bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80')]">
+        <div>
+            <picture>
+                <source srcSet={wallpaper} type="image/webp" />
+                <img
+                    src={placeholder}
+                    width={width}
+                    height={height}
+                    className="absolute -z-50 object-cover object-center w-full h-full"
+                    alt=""
+                />
+            </picture>
             <header className="absolute inset-x-0 top-0 z-50">
                 <nav
                     className="flex items-center justify-between p-6 lg:px-8"
@@ -21,12 +41,8 @@ export default function Example() {
                 >
                     <div className="flex lg:flex-1">
                         <a href="#" className="-m-1.5 p-1.5 ">
-                            <span className="sr-only">Your Company</span>
-                            <img
-                                className="h-8 w-auto"
-                                src="https://drive.google.com/uc?export=view&id=1ZDYIXwnwE5S3IwTKr_3-zWTZSqol-ATe"
-                                alt=""
-                            />
+                            <span className="sr-only">Krapaw</span>
+                            <img className="h-8 w-auto" src={logo} alt="" />
                         </a>
                     </div>
                     <div className="flex lg:hidden">
@@ -72,11 +88,7 @@ export default function Example() {
                         <div className="flex items-center justify-between">
                             <a href="#" className="-m-1.5 p-1.5 ">
                                 <span className="sr-only">Your Company</span>
-                                <img
-                                    className="h-8 w-auto"
-                                    src="https://drive.google.com/uc?export=view&id=1ZDYIXwnwE5S3IwTKr_3-zWTZSqol-ATe"
-                                    alt=""
-                                />
+                                <img className="h-8 w-auto" src={logo} alt="" />
                             </a>
                             <button
                                 type="button"
@@ -137,7 +149,7 @@ export default function Example() {
                             </a>
                             <a
                                 href="#"
-                                className="text-sm font-semibold leading-6 p-1 rounded border-UranianBlue text-UranianBlue hover:border-2"
+                                className="text-sm font-semibold leading-6 p-1 rounded hover:outline-UranianBlue text-UranianBlue hover:outline-none"
                             >
                                 Learn more <span aria-hidden="true">→</span>
                             </a>
