@@ -65,7 +65,7 @@ export default function Footer() {
                         <div className="flex flex-row space-x-4 content-center items-center pt-2">
                             {socials.map(({ name, url, icon }) => {
                                 return (
-                                    <div className="w-10 hover:opacity-80">
+                                    <div className="w-10 hover:opacity-80 hover:scale-110 transition-transform">
                                         <a target="_blank" href={url}>
                                             <img src={icon} alt={name} />
                                         </a>
@@ -85,7 +85,7 @@ export default function Footer() {
                                         <a
                                             target="_blank"
                                             href={url}
-                                            className="flex items-center h-12 px-4 py-2 bg-gradient-to-bl from-white to-gray-300 shadow-xl shadow-gray-400/60 rounded-md hover:opacity-80"
+                                            className="flex items-center h-12 px-4 py-2 bg-gradient-to-bl from-white to-gray-300 shadow-xl shadow-gray-400/60 rounded-md hover:opacity-90 hover:scale-105 transition-transform"
                                         >
                                             <img
                                                 src={icon}
