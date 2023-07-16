@@ -1,4 +1,6 @@
 import { RefObject, useEffect, useMemo, useRef, useState } from 'react';
+// @ts-ignore
+import two_bags from '@/assets/two_bags.png?format=webp';
 
 export default function Brag() {
     const lightweight = useRef(null);
@@ -9,10 +11,14 @@ export default function Brag() {
 
         const observer = useMemo(
             () =>
-                new IntersectionObserver(([entry]) =>
-                    setTimeout(() => {
-                        setIsIntersecting(entry.isIntersecting);
-                    }, 100)
+                new IntersectionObserver(
+                    ([entry]) => {
+                        if (!entry.isIntersecting) return;
+                        setTimeout(() => {
+                            setIsIntersecting(entry.isIntersecting);
+                        }, 200);
+                    },
+                    { root: null, rootMargin: '0px', threshold: 0.5 }
                 ),
             []
         );
@@ -41,16 +47,18 @@ export default function Brag() {
                     >
                         <div className="aspect-square object-cover">
                             <img
-                                className="h-full object-cover object-left blur-[2px] group-hover:blur-none transition-all"
+                                className={`h-full object-cover object-left blur-[2px] group-hover:blur-none ${
+                                    !useIntersectViewport(lightweight) &&
+                                    'blur-none'
+                                } transition-all`}
                                 src="https://images.unsplash.com/photo-1581553680321-4fffae59fccd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
                                 alt=""
                             />
                         </div>
                         <div
                             className={`${
-                                useIntersectViewport(lightweight)
-                                    ? ''
-                                    : 'opacity-0'
+                                !useIntersectViewport(lightweight) &&
+                                'opacity-0 blur-xl'
                             } absolute inset-0 bg-white/60 group-hover:-translate-y-full group-hover:opacity-0 duration-500 p-6 lg:p-12 transition-all`}
                         >
                             <h1 className="font-inter font-medium text-h5 sm:text-h3 lg:text-h2 pb-3 sm:p-0 text-BerkelyBlue uppercase">
@@ -69,14 +77,17 @@ export default function Brag() {
                     >
                         <div className="aspect-square object-cover">
                             <img
-                                className="h-full object-cover object-left blur-[2px] group-hover:blur-none transition-all"
+                                className={`h-full object-cover object-left blur-[2px] group-hover:blur-none ${
+                                    !useIntersectViewport(secure) && 'blur-none'
+                                } transition-all`}
                                 src="https://images.unsplash.com/photo-1564209510114-d98212b0e861?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80"
                                 alt=""
                             />
                         </div>
                         <div
                             className={`${
-                                useIntersectViewport(secure) ? '' : 'opacity-0'
+                                !useIntersectViewport(secure) &&
+                                'opacity-0 blur-xl'
                             } absolute inset-0 bg-white/60 group-hover:-translate-y-full group-hover:opacity-0 duration-500 p-6 lg:p-12 transition-all`}
                         >
                             <h1 className="font-inter font-medium text-h5 sm:text-h3 lg:text-h2 pb-3 sm:p-0 text-BerkelyBlue uppercase">
@@ -95,14 +106,18 @@ export default function Brag() {
                     >
                         <div className="aspect-square object-cover">
                             <img
-                                className="h-full object-cover object-left blur-[2px] group-hover:blur-none transition-all"
-                                src="https://drive.google.com/uc?export=view&id=1ZJ4bzJg6AZjTr9J6Z3r-5yhj3sbwm9U5"
+                                className={`h-full object-cover object-left blur-[2px] group-hover:blur-none ${
+                                    !useIntersectViewport(lightweight) &&
+                                    'blur-none'
+                                } transition-all`}
+                                src={two_bags}
                                 alt=""
                             />
                         </div>
                         <div
                             className={`${
-                                useIntersectViewport(durable) ? '' : 'opacity-0'
+                                !useIntersectViewport(durable) &&
+                                'opacity-0 blur-xl'
                             } absolute inset-0 bg-white/60 group-hover:-translate-y-full group-hover:opacity-0 duration-500 p-6 lg:p-12 transition-all`}
                         >
                             <h1 className="font-inter font-medium text-h5 sm:text-h3 lg:text-h2 pb-3 sm:p-0 text-BerkelyBlue uppercase">

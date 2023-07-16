@@ -29,6 +29,8 @@ export default function Collections() {
         const newIndex = isLastSlide ? 0 : currentIndex + 1;
         setCurrentIndex(newIndex);
     };
+
+    // you should use useEffect or useReducer here na, or just manage an array of images instead
     const firstPic = currentIndex;
     const secondPic = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
     const thirdPic = secondPic === slides.length - 1 ? 0 : secondPic + 1;
