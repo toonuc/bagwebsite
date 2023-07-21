@@ -6,7 +6,7 @@ const navigation = [
     { name: 'LUGGAGE', href: '#' },
     { name: 'BACKPACK', href: '#' },
     { name: 'SHOULDER BAGS', href: '#' },
-    { name: 'ACCESSORIERS', href: '#' },
+    { name: 'ACCESSORIES', href: '#' },
 ]
 
 export default function Example() {
